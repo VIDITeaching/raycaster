@@ -19,7 +19,7 @@
  */
 
 
-export function rayIntersectsTriangle (rayOrigin, rayVector, triangle, out) {
+function rayIntersectsTriangle (rayOrigin, rayVector, triangle, out) {
     const EPSILON = 0.0000001;
     const [v0, v1, v2] = triangle;
     const edge1 = vec3.create();
@@ -70,7 +70,7 @@ export function rayIntersectsTriangle (rayOrigin, rayVector, triangle, out) {
  * @param invView invert view matrix
  * @return 3D point position
  */
-export function unproject (screenCoord, viewport, invProjection, invView) {
+function unproject (screenCoord, viewport, invProjection, invView) {
     const [left, top, width, height] = viewport;
     const [x, y] = screenCoord;
 
